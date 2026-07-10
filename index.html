@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aveline Marsh — Paintings & Studies</title>
+<meta name="description" content="An artist portfolio of oil, acrylic, watercolor, and sketch work, spanning two distinct bodies: Luminous and Nocturne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="spotlight" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a href="#top" class="nav__mark">Aveline Marsh</a>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav__links" id="navLinks">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero__canvas" data-style="nocturne">
+      <div class="hero__texture"></div>
+    </div>
+    <div class="hero__content">
+      <p class="eyebrow">Oil &nbsp;·&nbsp; Acrylic &nbsp;·&nbsp; Watercolor &nbsp;·&nbsp; Sketch</p>
+      <h1 class="hero__title">Aveline Marsh</h1>
+      <p class="hero__tagline">Two bodies of work, one hand — paintings that chase daylight,<br class="br-desktop"> and studies that live after dark.</p>
+      <div class="hero__cta">
+        <a href="#work" class="btn btn--primary">View the Work</a>
+        <a href="#about" class="btn btn--ghost">About the Artist</a>
+      </div>
+    </div>
+    <div class="hero__label">
+      <span class="hero__label-title">Study in Waiting</span>
+      <span class="hero__label-meta">Oil on canvas · 30 × 40 in · 2025</span>
+    </div>
+    <a href="#work" class="scroll-cue" aria-label="Scroll to work">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- WORK / GALLERY -->
+  <section class="work" id="work">
+    <div class="section-head">
+      <p class="eyebrow">Selected Work</p>
+      <h2>The Collection</h2>
+      <p class="section-sub">Filter by body of work or medium to move through the gallery.</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filter artwork">
+      <div class="filters__group">
+        <span class="filters__label">Style</span>
+        <button class="pill is-active" data-filter-type="style" data-filter="all">All</button>
+        <button class="pill pill--luminous" data-filter-type="style" data-filter="luminous">Luminous</button>
+        <button class="pill pill--nocturne" data-filter-type="style" data-filter="nocturne">Nocturne</button>
+      </div>
+      <div class="filters__group">
+        <span class="filters__label">Medium</span>
+        <button class="pill is-active" data-filter-type="medium" data-filter="all">All</button>
+        <button class="pill" data-filter-type="medium" data-filter="oil">Oil</button>
+        <button class="pill" data-filter-type="medium" data-filter="acrylic">Acrylic</button>
+        <button class="pill" data-filter-type="medium" data-filter="watercolor">Watercolor</button>
+        <button class="pill" data-filter-type="medium" data-filter="sketch">Sketch</button>
+      </div>
+    </div>
+
+    <div class="gallery" id="gallery"><!-- populated by script.js --></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about__portrait" data-style="luminous">
+      <div class="hero__texture"></div>
+    </div>
+    <div class="about__content">
+      <p class="eyebrow">About</p>
+      <h2>Working in two lights</h2>
+      <p>My studio holds two ongoing conversations. <em>Luminous</em> is where I chase weather — the particular gold of late afternoon, fog breaking over water, the softness of a room lit by one window. It's built in oil and watercolor, layered slowly, in the impressionist tradition of painting light itself rather than the object it falls on.</p>
+      <p><em>Nocturne</em> is the other half: bolder, faster, built in acrylic and ink, closer to animation than observation. These are the pieces that come out after the sun goes down — more graphic, more invented, more willing to break a rule the daylight work wouldn't.</p>
+      <p>I trained across traditional and contemporary methods and now move between them depending on what a piece is asking for. Every work you see here, in either body, starts on paper before it starts on canvas.</p>
+      <a href="#contact" class="btn btn--primary">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <p class="eyebrow">Visit / Inquire</p>
+      <h2>Commissions &amp; Originals</h2>
+      <p class="contact__sub">Available for select commissions, gallery inquiries, and print requests. I reply within two business days.</p>
+      <a href="mailto:hello@avelinemarsh.art" class="contact__email">hello@avelinemarsh.art</a>
+      <div class="contact__meta">
+        <div>
+          <span class="contact__label">Studio Hours</span>
+          <span>By appointment · Tue–Sat</span>
+        </div>
+        <div>
+          <span class="contact__label">Based in</span>
+          <span>Portland, Oregon</span>
+        </div>
+        <div>
+          <span class="contact__label">Elsewhere</span>
+          <span class="contact__social">
+            <a href="#">Instagram</a>
+            <a href="#">Saatchi Art</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>© <span id="year"></span> Aveline Marsh. All works reserved.</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
